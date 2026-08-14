@@ -61,7 +61,7 @@ body{
 }
 .hero__veil{
   position:absolute;inset:0;
-  background:linear-gradient(100deg,#F7F5F1 0%,#F7F5F1 38%,rgba(247,245,241,.9) 54%,rgba(247,245,241,.5) 76%,rgba(247,245,241,.18) 100%);
+  background:linear-gradient(100deg,#F7F5F1 0%,#F7F5F1 38%,rgba(247,245,241,.9) 41%,rgba(247,245,241,.5) 47%,rgba(247,245,241,.18) 100%);
 }
 .hero__top{
   position:relative;z-index:2;max-width:var(--col);width:100%;margin:0 auto;
@@ -81,6 +81,7 @@ body{
   letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
   padding-top:0;max-width:32ch;
 }
+.hero__sub{font-style:italic;font-size:16px;line-height:1.6;color:var(--body);max-width:42ch;margin:16px 0 0}
 .hero__acts{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 0}
 .btn{
   display:inline-block;font-family:var(--mono);font-weight:500;
@@ -94,7 +95,7 @@ body{
 .btn--ghost:hover,.btn--ghost:focus-visible{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
 /* ---------- секции ---------- */
-.sec{border-top:1px solid var(--rule);padding:52px 0}
+.sec{padding:58px 0}
 .sec__head{
   display:flex;justify-content:space-between;align-items:baseline;
   padding-bottom:14px;margin-bottom:32px;border-bottom:1.5px solid var(--ink);
@@ -102,11 +103,14 @@ body{
 .sec__note{margin:-18px 0 32px;color:var(--stone);font-size:16px;max-width:52ch}
 
 /* ---------- маршрут ---------- */
-.step{display:grid;grid-template-columns:56px 1fr;gap:26px;padding:22px 0;border-top:1px solid var(--rule)}
+.step{padding:24px 0;border-top:1px solid var(--rule)}
 .step:first-child{border-top:none;padding-top:0}
 .step__no{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--brass);letter-spacing:.08em;padding-top:11px}
 .step__t{font-family:var(--serif);font-size:38px;font-weight:600;line-height:1.1;letter-spacing:-.005em;color:var(--ink)}
-.step__d{color:var(--stone);font-size:16px;margin-top:12px;max-width:54ch}
+.step__d{color:var(--stone);font-size:16px;margin-top:12px;max-width:60ch}
+.sec--lede{padding:78px 0 70px}
+.lede{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3.1vw,33px);line-height:1.36;letter-spacing:-.004em;color:var(--ink);max-width:42ch;margin:0 auto;text-align:center;text-wrap:balance}
+.fleuron{display:block;width:340px;max-width:100%;height:40px;color:var(--brass);margin:0 auto 34px}
 
 /* ---------- опыт ---------- */
 .job{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:baseline;padding:17px 0;border-top:1px solid var(--rule)}
@@ -139,24 +143,24 @@ body{
 @media (prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 @media (max-width:1024px){
-  .hero{min-height:66vh}
+  .hero{min-height:78vh}
   .hero__bg{background-position:72% 10%;filter:grayscale(1) brightness(1.24) contrast(.9)}
-  .hero__veil{background:linear-gradient(180deg,rgba(247,245,241,.1) 0%,rgba(247,245,241,.5) 40%,rgba(247,245,241,.9) 66%,var(--paper) 88%)}
+  .hero__veil{background:linear-gradient(180deg,rgba(247,245,241,0) 0%,rgba(247,245,241,.07) 37%,rgba(247,245,241,.6) 67%,rgba(247,245,241,1) 90%,var(--paper) 105%)}
   .hero__in{padding-bottom:54px}
 }
 
 @media (max-width:760px){
   .wrap,.hero__top,.hero__in,.foot{padding-left:22px;padding-right:22px}
-  .hero{min-height:58vh}
+  .hero{min-height:64vh}
   .hero__top{padding:18px 22px 12px}
   .hero__bg{background-position:70% 6%;filter:grayscale(1) brightness(1.26) contrast(.9)}
-  .hero__veil{background:linear-gradient(180deg,rgba(247,245,241,.06) 0%,rgba(247,245,241,.44) 36%,rgba(247,245,241,.9) 62%,var(--paper) 84%)}
+  .hero__veil{background:linear-gradient(180deg,rgba(247,245,241,0) 0%,rgba(247,245,241,.05) 0%,rgba(247,245,241,.56) 63%,rgba(247,245,241,.93) 80%,var(--paper) 93%)}
   .hero__in{padding-bottom:40px}
   .hero__name{font-size:clamp(44px,12.5vw,64px);margin-bottom:16px}
   .hero__role{font-size:12px;padding-top:0;max-width:none}
   .hero__acts{margin-top:26px}
   .btn{padding:15px 24px}
-  .sec{padding:42px 0}
+  .sec{padding:46px 0}
   .sec__head{margin-bottom:26px}
   .sec__note{margin:-14px 0 26px}
   .nums{grid-template-columns:1fr;gap:24px}
@@ -166,9 +170,12 @@ body{
   .clients .client:nth-child(2){border-top:1px solid var(--rule)}
   .job{grid-template-columns:1fr;gap:6px}
   .job__m{text-align:left}
-  .step{grid-template-columns:1fr;gap:6px}
-  .step__no{padding-top:0}
-  .step__t{font-size:32px}
+  .step{padding:20px 0}
+  .step__t{font-size:30px}
+  .lede{font-size:clamp(21px,5.6vw,27px);max-width:none}
+  .fleuron{width:250px;height:29px;margin-bottom:24px}
+  .sec--lede{padding:44px 0 40px}
+  .hero__sub{font-size:15px;max-width:none}
   .foot{flex-direction:column;gap:18px}
   .foot__col--r{text-align:left}
 }
@@ -201,6 +208,7 @@ body{
   <div class="hero__in">
     <h1 class="hero__name">Анна<br>Чулкова</h1>
     <p class="hero__role">Юрист по инвестиционно-<br>строительным проектам</p>
+    <p class="hero__sub">Работаю с коммерческой и промышленной недвижимостью.</p>
     <div class="hero__acts">
       <a class="btn" href="tel:+79251718080">Позвонить</a>
       <a class="btn btn--ghost" href="tel:+79251718080">+7 925 171-80-80</a>
@@ -210,36 +218,40 @@ body{
 
 <div class="wrap">
 
-  <section class="sec rise" style="border-top:none">
-    <div class="sec__head"><span class="tag">~ / маршрут проекта</span><span class="tag">§ 01</span></div>
+  <section class="sec sec--lede rise">
+    <svg class="fleuron" viewBox="0 0 340 40" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M152 20 C142 20 138 11 128 11 C119 11 116 18 123 20.5 C128.5 22.4 132 17.5 128.5 13.6"/>
+        <path d="M188 20 C198 20 202 11 212 11 C221 11 224 18 217 20.5 C211.5 22.4 208 17.5 211.5 13.6"/>
+        <path d="M114 20 H34"/>
+        <path d="M226 20 H306"/>
+        <path d="M170 7.5 L181 20 L170 32.5 L159 20 Z"/>
+      </g>
+      <path d="M170 13.6 L175.4 20 L170 26.4 L164.6 20 Z" fill="currentColor"/>
+      <circle cx="26" cy="20" r="2.1" fill="currentColor"/>
+      <circle cx="314" cy="20" r="2.1" fill="currentColor"/>
+    </svg>
+    <p class="lede">Представляю интересы инвесторов, девелоперов и собственников бизнеса при реализации сложных проектов строительства — от земельно-градостроительной оценки до разрешительной документации и ввода объекта.</p>
+  </section>
+
+  <section class="sec rise">
+    <div class="sec__head"><span class="tag">~ / юридическое сопровождение</span><span class="tag">§ 01</span></div>
     <div>
       <div class="step">
-        <span class="step__no">01</span>
-        <div>
-          <h2 class="step__t">Анализ</h2>
-          <p class="step__d">Оценка градостроительного потенциала участка до входа в сделку: что здесь можно построить и что этому помешает.</p>
-        </div>
+        <h2 class="step__t">Градостроительный анализ</h2>
+        <p class="step__d">Комплексная оценка градостроительного потенциала земельного участка до входа в сделку. Определение допустимых параметров застройки, ограничений и ключевых рисков реализации проекта.</p>
       </div>
       <div class="step">
-        <span class="step__no">02</span>
-        <div>
-          <h2 class="step__t">Земля</h2>
-          <p class="step__d">Выкуп участков у государства и муниципалитета, увеличение площади за счёт присоединения смежных, устранение пересечений границ и зон с особыми условиями.</p>
-        </div>
+        <h2 class="step__t">Земельный актив</h2>
+        <p class="step__d">Формирование и юридическая оптимизация земельного актива: выкуп участков у государства и муниципалитета, увеличение площади за счёт смежных территорий, изменение границ и видов разрешённого использования, работа с ограничениями и обременениями.</p>
       </div>
       <div class="step">
-        <span class="step__no">03</span>
-        <div>
-          <h2 class="step__t">Разрешения</h2>
-          <p class="step__d">Разрешение на строительство объектов капитального строительства любых типов, согласование в зонах с особыми условиями использования территории.</p>
-        </div>
+        <h2 class="step__t">Разрешительная стратегия</h2>
+        <p class="step__d">Юридическое сопровождение разрешительного контура проекта: подготовка правовой позиции, получение разрешения на строительство, сопровождение согласований в зонах с особыми условиями использования территории и решение нестандартных градостроительных вопросов.</p>
       </div>
       <div class="step">
-        <span class="step__no">04</span>
-        <div>
-          <h2 class="step__t">Сделка и защита</h2>
-          <p class="step__d">Сопровождение сделок с недвижимостью, судебные споры по земельным участкам и объектам капитального строительства.</p>
-        </div>
+        <h2 class="step__t">Сделки и защита инвестиций</h2>
+        <p class="step__d">Правовая проверка и структурирование сделок с земельными участками и объектами капитального строительства. Сопровождение сложных земельно-градостроительных споров и защита интересов инвестора на ключевых этапах проекта.</p>
       </div>
     </div>
   </section>
